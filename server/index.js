@@ -13,6 +13,9 @@ const port = process.env.NODE_BACKEND_PORT || 8080;
 
 app.use(cors())
 app.use(bodyParser.json())
+app.use('/ping', (req, res)=>{
+    res.send('PING PONG')
+})
 app.use('/auth', AuthRouter)
 app.use('/products', ProductRouter)
 app.listen(port, ()=>{
