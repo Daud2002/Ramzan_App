@@ -27,7 +27,6 @@ export default function Home() {
   useEffect(() => {
     fetchProducts()
   }, [])
-  console.log("------------------------------", data);
   const handlelogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('loggedInUser');
